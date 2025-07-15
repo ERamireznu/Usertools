@@ -8,7 +8,6 @@ import unicodedata
 #-----------------------------
 
 path_def = 'C:\\Users\\esteb\\__Files'   #home
-##path00 = 'C:\\Users\\esteb\\AppData\\Local\\Programs\\Python\\Python313\\__Files'  #use this folder for searching dates (texis)
 
 Months = ['ene','jan','feb','mar','apr','abr','may','jun','jul','aug','ago','sep','oct','nov','dec','dic']
 DatesN = ['-1-','-2-','-3-','-4-','-5-','-6-','-7-','-8-','-9-',
@@ -187,7 +186,6 @@ else:
 
                                     check02 = (para.text)[ind : ind + 5]   #searching complete names (as in Styles2)
                                     if check02.lower() in [x[:5] for x in Styles2]:
-##                                        print(ind, check02, 'Styles2') #debug
                                         MultiRes_adi[i].append(add_date)
 ##                                        break
                                 
@@ -217,8 +215,7 @@ else:
                                             c = 0
                                             #mini algo: searches a 3 digit word and then adds 1 char per side each time (ex.: 'dic'->'dica'->'ndica'...)
                                             for b in range(3, 7):
-                                                check00 = (cell.text)[ind - c : ind + b +1]
-##                                                print(check00,'    tables') #debug                                               
+                                                check00 = (cell.text)[ind - c : ind + b +1]                 
                                                 if check00.lower() in Styles:
                                                     if check00.lower() in Excpts:
                                                         check00 = (cell.text)[ind - c : ind + b +2]
@@ -250,10 +247,7 @@ else:
                                                 MultiRes_adi[i].append(add_date)
                                                 break
 
-
-
-                                                    
-                                                #--------****************---------------                                        
+                                   
                             else:
                                 for i in range(len(Multiphrase)): 
                                     if Multiphrase[i] in cell.text:  # Case sensitive search
