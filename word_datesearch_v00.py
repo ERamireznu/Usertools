@@ -163,7 +163,6 @@ else:
                                                 check00 = (para.text)[ind - c : ind + b +2]
                                                 if check00[-1].isdigit():
                                                     MultiRes_adi[i].append(add_date)
-##                                                    MultiRes_adi[i].append(f"f_{num} " + prev_next_phrase2(para.text, Multiphrase[i], ind, phrase_left, phrase_right, case_insen))
                                                     break
                                                 else:
                                                     break
@@ -280,8 +279,6 @@ else:
     con_end = [' }' for i in range(len(Multiphrase))]
 
     #display:
-
-    
     print(f"Results: {sum([len(MultiRes_adi[k])for k in range(len(MultiRes_adi))])}")
     lis_disp = list(zip(con_beg, Multiphrase, con_end, [': ' for i in range(len(Multiphrase))], Multicont_total))
 
